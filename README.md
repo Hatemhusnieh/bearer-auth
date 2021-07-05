@@ -11,9 +11,9 @@
 1. run the app
 
 ## Deploy, Run and Test
-- [test report](https://github.com/Hatemhusnieh/basic-auth/actions)
-- [deployed link](https://hatem-basic-auth.herokuapp.com/)
-- [Pull Request](https://github.com/Hatemhusnieh/basic-auth/pull/1)
+- [test report](https://github.com/Hatemhusnieh/bearer-auth/actions)
+- [deployed link](https://hatem-bearer-auth.herokuapp.com/)
+- [Pull Request](https://github.com/Hatemhusnieh/bearer-auth/pull/1)
 
 ### Setup  
 #### `.env` requirement
@@ -30,22 +30,38 @@
 - Sign Up: `http://localhost:3001/signup`
   - send an `json` object as follow:  
 
-    ![signup](./img/signup.png)  
+    ![signup](./img/sup.png)  
 
   - returns user Object as saved in DB  
 
-    ![Object](img/res1.png)  
+    ![Object](img/upres.png)  
 - Sign In: `http://localhost:3001/signin`
   - send in headers username and password as follow :  
-    ![signin](img/signin.png)  
+    ![signin](img/sin.png)  
 
   - returns Object  
 
-    ![Object](img/res2.png)  
+    ![Object](img/inres.png)  
+- users end point: `http://localhost:3001/users`
+  - send the bearer token from the sign in process :  
+
+    ![bearer](/img/user.png)  
+  - returns Object  
+
+    ![Object](img/userres.png)  
+- secret end point: `http://localhost:3001/secret`
+  - send the bearer token from the sign in process :  
+
+    ![secret](/img/sec.png) 
+
+  - returns Object  
+
+    ![Object](img/secres.png)   
+
 
 #### Test 
 - Unit test: `npm run test`
 - Lint test: `npm run lint`
 
 ### UML:  
-![uml](img/labs.jpg)
+![uml](img/bearer-auth.jpg)
